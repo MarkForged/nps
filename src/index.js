@@ -1,13 +1,14 @@
 import spawn from 'spawn-command-with-kill'
 import chalk from 'chalk'
 import {oneLine} from 'common-tags'
-import {isString, clone} from 'lodash'
+import {isString, clone, reduce} from 'lodash'
 import {sync as findUpSync} from 'find-up'
 import managePath from 'manage-path'
 import arrify from 'arrify'
 import getScriptToRun from './get-script-to-run'
 import getScriptsFromConfig from './get-scripts-from-config'
 import getLogger, {getLogLevel} from './get-logger'
+import {replacePositionalArgs} from './replace-positional-args'
 
 const NON_ERROR = 0
 
@@ -56,7 +57,8 @@ function runPackageScript({scriptConfig, options, input}) {
       ref: 'missing-script',
     })
   }
-  const command = [script, ...args].join(' ').trim()
+  const [newScript, reducedArgs] = replacePositionalArgs(script, args)
+  const command = [newScript, ...reducedArgs].join(' ').trim()
   const log = getLogger(getLogLevel(options))
   const showScript = options.scripts
   log.info(

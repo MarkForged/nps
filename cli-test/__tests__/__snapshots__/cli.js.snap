@@ -29,14 +29,6 @@ log
 }
 `;
 
-exports[`with silent option set true 1`] = `
-Object {
-  "stderr": "",
-  "stdout": "silent
-",
-}
-`;
-
 exports[`with a missing config 1`] = `
 Object {
   "stderr": "Unable to find JS config at \\"./something-that-does-not-exist.js\\". https://github.com/sezna/nps/blob/master/other/ERRORS_AND_WARNINGS.md#unable-to-find-config
@@ -54,11 +46,55 @@ default script
 }
 `;
 
+exports[`with multiple positional arguments 1`] = `
+Object {
+  "stderr": "",
+  "stdout": "nps is executing \`multiple\` : echo \\"hello foo bar nps\\"
+hello foo bar nps
+",
+}
+`;
+
+exports[`with no positional arguments 1`] = `
+Object {
+  "stderr": "",
+  "stdout": "nps is executing \`none\` : echo \\"hello nps\\" -- foo bar
+hello nps -- foo bar
+",
+}
+`;
+
 exports[`with prefix 1`] = `
 Object {
   "stderr": "",
   "stdout": "nps is executing \`lint.sub.thing.script\` : echo \\"deeply nested thing\\"
 deeply nested thing
+",
+}
+`;
+
+exports[`with second positional argument 1`] = `
+Object {
+  "stderr": "",
+  "stdout": "nps is executing \`second\` : echo \\"hello bar nps\\" -- foo
+hello bar nps -- foo
+",
+}
+`;
+
+exports[`with silent option set true 1`] = `
+Object {
+  "stderr": "",
+  "stdout": "silent
+",
+}
+`;
+
+exports[`with single positional argument 1`] = `
+Object {
+  "stderr": "",
+  "stdout": "nps is executing \`single\` : echo \\"hello foo nps\\"
+hello foo nps
 ",
 }
 `;
