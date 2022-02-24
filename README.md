@@ -403,6 +403,9 @@ module.exports = {
         description: "this is a handy description"
       }
     },
+    // you can specify commands with positional arguments, in this example `nps "positional bar foo"` will run
+    // `echo foo bar`
+    positional: 'echo $2 $1'
     // this one can be executed a few different ways:
     // 1. nps k
     // 2. nps kebab-case

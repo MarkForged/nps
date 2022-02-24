@@ -22,6 +22,26 @@ test('with prefix', () => snapshot('--config ./package-scripts.js lint.s.t.s'))
 
 test('with --no-scripts', () => snapshot('test --no-scripts'))
 
+test('with single positional argument', () =>
+  snapshot(
+    '--config ./package-scripts-with-positional-args.js "single -- foo"',
+  ))
+
+test('with second positional argument', () =>
+  snapshot(
+    '--config ./package-scripts-with-positional-args.js "second -- foo bar"',
+  ))
+
+test('with multiple positional arguments', () =>
+  snapshot(
+    '--config ./package-scripts-with-positional-args.js "multiple -- foo bar"',
+  ))
+
+test('with no positional arguments', () =>
+  snapshot(
+    '--config ./package-scripts-with-positional-args.js "none -- foo bar"',
+  ))
+
 function snapshot(args) {
   return runNPS(fixturesPath, args).then(results => {
     const snapshottableResults = convertResultToLinuxSpecific(results)
