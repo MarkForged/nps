@@ -1,7 +1,7 @@
 import spawn from 'spawn-command-with-kill'
 import chalk from 'chalk'
 import {oneLine} from 'common-tags'
-import {isString, clone, reduce} from 'lodash'
+import {isString, clone} from 'lodash'
 import {sync as findUpSync} from 'find-up'
 import managePath from 'manage-path'
 import arrify from 'arrify'

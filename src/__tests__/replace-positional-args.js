@@ -18,6 +18,12 @@ test('should replace positional args in the order specified', () => {
   ])
 })
 
+test('should allow using positional args multiple times', () => {
+  expect(
+    replacePositionalArgs('foobar $1 $2 $1', ['--', 'foo', 'bar']),
+  ).toEqual(['foobar foo bar foo', []])
+})
+
 test('should throw if positional args required but not specified', () => {
   expect(() => replacePositionalArgs('foobar $2 $1', [])).toThrow(
     'Argument $2 not specified',
