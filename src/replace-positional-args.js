@@ -15,7 +15,8 @@ function replacePositionalArgs(script, args) {
     const argIndex = parseInt(token.slice(1), 10)
     const arg = args[argIndex]
     if (typeof arg === 'undefined') {
-      throw new Error(`Argument $${argIndex} not specified`)
+      // eslint-disable-next-line no-continue
+      continue
     }
     scriptTokens[i] = args[argIndex]
     usedArgs.push(argIndex)

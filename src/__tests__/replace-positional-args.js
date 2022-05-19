@@ -24,8 +24,12 @@ test('should allow using positional args multiple times', () => {
   ).toEqual(['foobar foo bar foo', []])
 })
 
-test('should throw if positional args required but not specified', () => {
-  expect(() => replacePositionalArgs('foobar $2 $1', [])).toThrow(
-    'Argument $2 not specified',
-  )
+test('should not throw if positional args required but not specified', () => {
+  expect(() => replacePositionalArgs('foobar $2 $1', [])).not.toThrow()
+})
+
+test('should allow mixing positional args and environment variables', () => {
+  expect(
+    replacePositionalArgs('foobar $1 $FOO $2 $1', ['--', 'foo', 'bar']),
+  ).toEqual(['foobar foo $FOO bar foo', []])
 })
