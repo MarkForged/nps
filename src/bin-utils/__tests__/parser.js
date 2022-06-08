@@ -52,17 +52,6 @@ jest.mock('../../bin-utils', () => {
   }
 })
 
-jest.mock('yargs/lib/usage', () => {
-  const usage = require.requireActual('yargs/lib/usage')
-  function mockUsage(...args) {
-    const actualUsage = usage(...args)
-    return Object.assign(actualUsage, {
-      showVersion: jest.fn(),
-    })
-  }
-  return mockUsage
-})
-
 jest.mock('yargs/yargs', () => {
   const yargs = require.requireActual('yargs/yargs')
 
