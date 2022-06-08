@@ -30,7 +30,7 @@
     "readline-sync": "^1.4.7",
     "spawn-command-with-kill": "^1.0.0",
     "type-detect": "^4.0.3",
-    "yargs": "14.2.0"
+    "yargs": "17.5.1"
   },
   "devDependencies": {
     "all-contributors-cli": "^4.3.0",
@@ -50,10 +50,11 @@
     "husky": "0.14.3",
     "jest-cli": "^22.0.0",
     "lint-staged": "^7.0.0",
-    "nps": "^5.4.0",
+    "@markforged/nps": "^5.11.0",
     "nps-utils": "^1.2.0",
     "opt-cli": "^1.5.1",
-    "prettier-eslint-cli": "^4.1.1"
+    "prettier-eslint-cli": "^4.1.1",
+    "snyk": "1.947.0"
   },
   "eslintConfig": {
     "extends": [
@@ -75,10 +76,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sezna/nps.git"
+    "url": "https://github.com/Markforged/nps.git"
   },
   "bugs": {
-    "url": "https://github.com/sezna/nps/issues"
+    "url": "https://github.com/Markforged/nps/issues"
   },
-  "homepage": "https://github.com/sezna/nps#readme"
+  "homepage": "https://github.com/Markforged/nps#readme"
 }
