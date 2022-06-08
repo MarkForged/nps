@@ -13,6 +13,7 @@ import {
   help,
   specificHelpScript,
 } from '../bin-utils'
+import kebabAndCamelCasify from '../kebab-and-camel-casify'
 import getCompletionScripts from './autocomplete-get-scripts'
 import getScriptByPrefix from './get-script-by-prefix'
 
@@ -245,10 +246,15 @@ function parse(rawArgv) {
   }
 
   function getInvalidFlags() {
-    const customFlags = Object.keys(yargsInstance.getOptions().default)
+    const customFlags = yargsInstance.getOptions().default
+    const aliasedCustomFlags = new Set([
+      ...Object.keys(kebabAndCamelCasify(customFlags)),
+      ...Object.keys(customFlags).map(key => key.slice(0, 1).toLowerCase()),
+    ])
     const allowedFlags = [
-      ...customFlags,
+      ...aliasedCustomFlags,
       'v',
+      'y',
       'version',
       'h',
       'help',

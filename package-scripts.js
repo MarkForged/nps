@@ -56,6 +56,12 @@ module.exports = {
         script: 'all-contributors generate',
       },
     },
+    snyk: {
+      test: {
+        description: 'Run snyk to discover vulnerable dependencies',
+        script: 'snyk test --severity-threshold=medium --org=markforged',
+      },
+    },
   },
   options: {
     silent: false,
