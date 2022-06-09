@@ -530,7 +530,7 @@ MIT
 [examples]: https://github.com/sezna/nps/blob/master/other/EXAMPLES.md
 [npm]: https://www.npmjs.com/
 [node]: https://nodejs.org
-[downloads-badge]: https://img.shields.io/npm/dm/nps.svg?style=flat-square
+[downloads-badge]: https://img.shields.io/npm/dm/@markforged/nps.svg?style=flat-square
 [npm-stat]: http://npm-stat.com/charts.html?package=@markforged/nps&from=2016-04-01
 [license-badge]: https://img.shields.io/npm/l/nps.svg?style=flat-square
 [license]: https://github.com/sezna/nps/blob/master/LICENSE
