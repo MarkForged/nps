@@ -1,9 +1,9 @@
-name: Snyk
+name: snyk
 
 on: [push]
 
 jobs:
-  security:
+  snyk:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master

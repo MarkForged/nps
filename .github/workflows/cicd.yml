@@ -1,9 +1,9 @@
-name: NPS CI
+name: cicd
 
 on: [push]
 
 jobs:
-  build:
+  cicd:
     runs-on: ubuntu-latest
 
     steps:

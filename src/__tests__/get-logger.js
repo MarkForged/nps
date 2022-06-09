@@ -41,7 +41,7 @@ test('allows you to log warnings/errors with a ref', () => {
   expect(console.warn).toHaveBeenCalledWith(
     ...message,
     oneLineTrim`
-      https://github.com/sezna/nps
+      https://github.com/Markforged/nps
       /blob/master
       /other/ERRORS_AND_WARNINGS.md#han-solo
     `,
