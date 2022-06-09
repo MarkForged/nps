@@ -465,6 +465,28 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "mf-bruce",
+      "name": "Bruce Jones",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/99811834?v=4",
+      "profile": "https://markforged.com",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "test",
+        "example"
+      ]
+    },
+    {
+      "login": "mf-pherlihy",
+      "name": "Pat Herlihy",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/55712890?v=4",
+      "profile": "https://markforged.com",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "repoType": "github"

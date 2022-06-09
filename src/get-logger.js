@@ -45,7 +45,7 @@ function getMessage(first, ...rest) {
 
 function getLink(ref) {
   return oneLineTrim`
-    https://github.com/sezna/nps/blob/master
+    https://github.com/Markforged/nps/blob/master
     /other/ERRORS_AND_WARNINGS.md#
     ${ref}
   `
