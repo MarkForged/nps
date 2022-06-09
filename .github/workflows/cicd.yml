@@ -1,6 +1,8 @@
 name: cicd
 
-on: [push]
+on:
+  workflow_call:
+  push:
 
 jobs:
   cicd:
@@ -14,6 +16,6 @@ jobs:
           node-version: 14.17.0
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci
+        run: npm i
       - name: Run Tests
         run: npm start validate
