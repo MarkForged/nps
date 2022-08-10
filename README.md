@@ -185,7 +185,7 @@ This module is distributed via [npm][npm] which is bundled with [node][node] and
 be installed as one of your project's `devDependencies`:
 
 ```
-npm install --save-dev nps
+npm install --save-dev @markforged/nps
 ```
 
 ### global installation
@@ -193,7 +193,7 @@ npm install --save-dev nps
 You can install this module globally also (this is recommended):
 
 ```
-npm install --global nps
+npm install --global @markforged/nps
 ```
 
 From here you can use `nps` on the command line via one of the installed aliases: `nps` or `nps`.
