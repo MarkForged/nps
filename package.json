@@ -1,6 +1,6 @@
 {
   "name": "@markforged/nps",
-  "version": "5.11.2",
+  "version": "5.11.3",
   "description": "All the benefits of npm scripts without the cost of a bloated package.json and limits of json",
   "main": "dist/index",
   "scripts": {
@@ -30,7 +30,7 @@
     "readline-sync": "^1.4.7",
     "spawn-command-with-kill": "^1.0.0",
     "type-detect": "^4.0.3",
-    "yargs": "17.5.1"
+    "yargs": "17.7.3"
   },
   "devDependencies": {
     "all-contributors-cli": "^4.3.0",
